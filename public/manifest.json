@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Резон-Петров 90",
+  "name": "Резон-Петров 90 - ISO Сертификация и Управленски Системи",
+  "description": "Лидери в ISO сертификация и управленски системи в България. 30+ години опит в ISO 9001, 14001, 27001, 45001, 22001, 39001.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +9,20 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "2222233333.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "2222233333.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0284c7",
+  "background_color": "#ffffff",
+  "lang": "bg",
+  "orientation": "portrait-primary"
 }

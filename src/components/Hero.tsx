@@ -31,13 +31,13 @@ const Hero: React.FC = () => {
           
           {/* Main heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 animate-fade-in leading-tight" style={{ animationDelay: '0.2s' }}>
-            Резон-Петров 90
+            Резон-Петров 90 - ISO Сертификация в България
           </h1>
           
           {/* Tagline */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
             Разработване на управленски системи съгласно ISO стандарти
-          </p>
+          </h2>
           
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up px-2" style={{ animationDelay: '0.2s' }}>
