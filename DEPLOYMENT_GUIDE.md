@@ -43,6 +43,11 @@ The `/build` folder contains all the files you need to upload to your SiteGround
 - Opens user's email client with pre-filled form data
 - No backend server required
 
+### 5. Google Analytics
+- ✅ Google Analytics tracking code included (ID: G-0H92QGDJZ6)
+- Tracks page views, user interactions, and site performance
+- Ready for analytics data collection
+
 ## 📋 Deployment Steps
 
 ### Step 1: Update Domain URLs
