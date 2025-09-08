@@ -50,11 +50,11 @@ The `/build` folder contains all the files you need to upload to your SiteGround
 
 ## 📋 Deployment Steps
 
-### Step 1: Update Domain URLs
-Before uploading, replace `yourdomain.com` in these files with your actual domain:
-- `public/index.html` (meta tags)
-- `public/sitemap.xml`
-- `public/robots.txt`
+### Step 1: Domain URLs Updated ✅
+All domain references have been updated to `resonpetrov.com`:
+- ✅ `public/index.html` (meta tags, Open Graph, structured data)
+- ✅ `public/sitemap.xml` (all page URLs)
+- ✅ `public/robots.txt` (sitemap reference)
 
 ### Step 2: Build the Site
 ```bash
