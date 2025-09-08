@@ -20,34 +20,13 @@ const Hero: React.FC = () => {
       
       <div className="container-max text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Compass Logo */}
+          {/* Company Logo */}
           <div className="flex justify-center mb-8 animate-fade-in">
-            <div className="w-20 h-20 lg:w-24 lg:h-24 relative">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                {/* Outer Circle */}
-                <circle cx="50" cy="50" r="45" fill="none" stroke="#0284c7" strokeWidth="4"/>
-                
-                {/* Inner Circle */}
-                <circle cx="50" cy="50" r="35" fill="none" stroke="#0369a1" strokeWidth="3"/>
-                
-                {/* Compass Needle - North */}
-                <line x1="50" y1="15" x2="50" y2="35" stroke="#dc2626" strokeWidth="5" strokeLinecap="round"/>
-                <polygon points="50,10 45,20 55,20" fill="#dc2626"/>
-                
-                {/* Compass Needle - South */}
-                <line x1="50" y1="65" x2="50" y2="85" stroke="#6b7280" strokeWidth="5" strokeLinecap="round"/>
-                <polygon points="50,90 45,80 55,80" fill="#6b7280"/>
-                
-                {/* Center Dot */}
-                <circle cx="50" cy="50" r="5" fill="#0284c7"/>
-                
-                {/* Direction Markers */}
-                <text x="50" y="12" textAnchor="middle" fontSize="14" fill="#0284c7" fontWeight="bold">N</text>
-                <text x="88" y="55" textAnchor="middle" fontSize="12" fill="#6b7280">E</text>
-                <text x="50" y="95" textAnchor="middle" fontSize="12" fill="#6b7280">S</text>
-                <text x="12" y="55" textAnchor="middle" fontSize="12" fill="#6b7280">W</text>
-              </svg>
-            </div>
+            <img 
+              src="/2222233333.png" 
+              alt="Резон-Петров 90 Logo" 
+              className="w-20 h-20 lg:w-24 lg:h-24 object-contain"
+            />
           </div>
           
           {/* Main heading */}

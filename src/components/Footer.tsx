@@ -24,33 +24,12 @@ const Footer: React.FC = () => {
               onClick={scrollToTop}
               className="flex items-center space-x-3 mb-6 hover:opacity-80 transition-opacity duration-300"
             >
-              {/* Compass Logo */}
-              <div className="w-8 h-8 relative">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  {/* Outer Circle */}
-                  <circle cx="50" cy="50" r="45" fill="none" stroke="#38bdf8" strokeWidth="3"/>
-                  
-                  {/* Inner Circle */}
-                  <circle cx="50" cy="50" r="35" fill="none" stroke="#7dd3fc" strokeWidth="2"/>
-                  
-                  {/* Compass Needle - North */}
-                  <line x1="50" y1="15" x2="50" y2="35" stroke="#f87171" strokeWidth="4" strokeLinecap="round"/>
-                  <polygon points="50,10 45,20 55,20" fill="#f87171"/>
-                  
-                  {/* Compass Needle - South */}
-                  <line x1="50" y1="65" x2="50" y2="85" stroke="#9ca3af" strokeWidth="4" strokeLinecap="round"/>
-                  <polygon points="50,90 45,80 55,80" fill="#9ca3af"/>
-                  
-                  {/* Center Dot */}
-                  <circle cx="50" cy="50" r="4" fill="#38bdf8"/>
-                  
-                  {/* Direction Markers */}
-                  <text x="50" y="12" textAnchor="middle" fontSize="12" fill="#38bdf8" fontWeight="bold">N</text>
-                  <text x="88" y="55" textAnchor="middle" fontSize="10" fill="#9ca3af">E</text>
-                  <text x="50" y="95" textAnchor="middle" fontSize="10" fill="#9ca3af">S</text>
-                  <text x="12" y="55" textAnchor="middle" fontSize="10" fill="#9ca3af">W</text>
-                </svg>
-              </div>
+              {/* Company Logo */}
+              <img 
+                src="/2222233333.png" 
+                alt="Резон-Петров 90 Logo" 
+                className="w-8 h-8 object-contain"
+              />
               
               {/* Company Name */}
               <span className="text-3xl font-bold text-white">
