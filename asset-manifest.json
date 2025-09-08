@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/reson-petrov-landing/static/js/main.4169aa90.js",
+    "main.js": "/reson-petrov-landing/static/js/main.bcbf1757.js",
     "static/js/453.14815a7b.chunk.js": "/reson-petrov-landing/static/js/453.14815a7b.chunk.js",
     "index.html": "/reson-petrov-landing/index.html",
-    "main.4169aa90.js.map": "/reson-petrov-landing/static/js/main.4169aa90.js.map",
+    "main.bcbf1757.js.map": "/reson-petrov-landing/static/js/main.bcbf1757.js.map",
     "453.14815a7b.chunk.js.map": "/reson-petrov-landing/static/js/453.14815a7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4169aa90.js"
+    "static/js/main.bcbf1757.js"
   ]
 }
