@@ -36,13 +36,13 @@ const Hero: React.FC = () => {
           
           {/* Tagline */}
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
-            Експерти в управленски системи и ISO стандарти
+            Разработване на управленски системи съгласно ISO стандарти
           </p>
           
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up px-2" style={{ animationDelay: '0.2s' }}>
-            Помагаме на компаниите да внедрят и поддържат най-високите стандарти за качество, 
-            екология, информационна сигурност и безопасност на труда.
+            Помагаме на компаниите да внедрят и поддържат ситеми за управление на качество, 
+            екология, информационна сигурност, безопасност на храните, безопастност при работа и безопастност при движение по пътищата.
           </p>
           
           {/* CTA Buttons */}
@@ -63,14 +63,18 @@ const Hero: React.FC = () => {
           
           {/* Trust indicators */}
           <div className="mt-12 sm:mt-16 animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
-            <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">Доверени от компании в различни индустрии</p>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 9001</div>
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 14001</div>
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 27001</div>
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 45001</div>
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">GDPR</div>
-              <div className="text-gray-300 font-semibold text-sm sm:text-base">HACCP</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 9001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 14001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 27001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 39001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 22001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 45001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">ISO 50001</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">EMAS</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">SSC</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">GDPR</div>
+              <div className="text-gray-500 font-semibold text-sm sm:text-base">HACCP</div>
             </div>
           </div>
         </div>

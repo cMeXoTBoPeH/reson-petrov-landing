@@ -10,10 +10,10 @@ const Industries: React.FC = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 50001']
+      standards: ['ISO 9001', 'ISO 14001','ISO 39001', 'ISO 45001', 'ISO 50001']
     },
     {
-      name: 'IT и технологии',
+      name: 'IT технологии',
       description: 'ISO 27001, GDPR за IT компании и технологични стартъпи',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,23 +24,23 @@ const Industries: React.FC = () => {
     },
     {
       name: 'Здравеопазване',
-      description: 'ISO 9001, ISO 14001 за болници и здравни заведения',
+      description: 'ISO 9001, ISO 14001 за болници, здравни заведения, вносители на медицински изделия',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       ),
-      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 15189']
+      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001']
     },
     {
-      name: 'Логистика',
+      name: 'Транспорт и логистика',
       description: 'ISO 9001, ISO 14001 за транспортни и логистични компании',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
       ),
-      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 28000']
+      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 39001', 'EMAS']
     },
     {
       name: 'Хранителна промишленост',
@@ -60,7 +60,7 @@ const Industries: React.FC = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
-      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 19650']
+      standards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'ISO 39001']
     }
   ];
 
@@ -143,3 +143,5 @@ const Industries: React.FC = () => {
 };
 
 export default Industries;
+
+

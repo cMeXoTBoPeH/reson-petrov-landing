@@ -21,7 +21,7 @@ const About: React.FC = () => {
       )
     },
     {
-      title: '98% успешност',
+      title: '100% успешност',
       description: 'Висок процент на успешно сертифициране на нашите клиенти.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,7 +58,7 @@ const About: React.FC = () => {
               </p>
               <p>
                 Нашият екип от сертифицирани експерти работи с компании от различни индустрии - 
-                от производство и IT до здравеопазване и логистика. Разбираме, че всяка организация 
+                от производство и IT до здравеопазване, транспорт и логистика. Разбираме, че всяка организация 
                 е уникална и изисква персонализиран подход.
               </p>
               <p>
@@ -77,7 +77,7 @@ const About: React.FC = () => {
                 }}
                 className="btn-primary"
               >
-                Запознайте се с нашия екип
+                Свържете се с нас
               </button>
             </div>
           </div>
@@ -119,7 +119,7 @@ const About: React.FC = () => {
               <div className="text-gray-600">Успешни проекта</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-brand-600 mb-2">98%</div>
+              <div className="text-4xl font-bold text-brand-600 mb-2">100%</div>
               <div className="text-gray-600">Успешност</div>
             </div>
             <div>
@@ -174,3 +174,5 @@ const About: React.FC = () => {
 };
 
 export default About;
+
+
