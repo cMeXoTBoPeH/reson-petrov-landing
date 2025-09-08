@@ -24,21 +24,22 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       <div className="container-max">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <button
               onClick={() => scrollToSection('hero')}
-              className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300"
+              className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity duration-300"
             >
               {/* Company Logo */}
               <img 
                 src={`${process.env.PUBLIC_URL}/2222233333.png`}
                 alt="Резон-Петров 90 Logo" 
-                className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain flex-shrink-0"
               />
               
               {/* Company Name */}
-              <span className="text-2xl lg:text-3xl font-bold text-gray-900">
-                Резон-Петров 90
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+                <span className="hidden sm:inline">Резон-Петров 90</span>
+                <span className="sm:hidden">Р-П 90</span>
               </span>
             </button>
           </div>
@@ -87,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-brand-600 transition-colors duration-300"
+              className="p-2 text-gray-700 hover:text-brand-600 transition-colors duration-300 rounded-lg hover:bg-gray-100"
             >
               <svg
                 className="w-6 h-6"
@@ -117,44 +118,46 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
+            <div className="px-4 py-6 space-y-2">
               <button
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-3 px-2 rounded-lg hover:bg-gray-50"
               >
                 Услуги
               </button>
               <button
                 onClick={() => scrollToSection('process')}
-                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-3 px-2 rounded-lg hover:bg-gray-50"
               >
                 Процес
               </button>
               <button
                 onClick={() => scrollToSection('industries')}
-                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-3 px-2 rounded-lg hover:bg-gray-50"
               >
                 Индустрии
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-3 px-2 rounded-lg hover:bg-gray-50"
               >
                 За нас
               </button>
               <button
                 onClick={() => scrollToSection('faq')}
-                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-brand-600 transition-colors duration-300 font-medium py-3 px-2 rounded-lg hover:bg-gray-50"
               >
                 Въпроси
               </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="btn-primary w-full mt-4"
-              >
-                Свържете се с нас
-              </button>
+              <div className="pt-4 border-t border-gray-200">
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="btn-primary w-full text-center"
+                >
+                  Свържете се с нас
+                </button>
+              </div>
             </div>
           </div>
         )}

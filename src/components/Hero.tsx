@@ -19,58 +19,58 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-40 left-20 w-12 h-12 bg-brand-300 rounded-full opacity-25 animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="container-max text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Company Logo */}
-          <div className="flex justify-center mb-8 animate-fade-in">
+          <div className="flex justify-center mb-6 sm:mb-8 animate-fade-in">
             <img 
               src={`${process.env.PUBLIC_URL}/2222233333.png`}
               alt="Резон-Петров 90 Logo" 
-              className="w-20 h-20 lg:w-24 lg:h-24 object-contain"
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
             />
           </div>
           
           {/* Main heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 animate-fade-in leading-tight" style={{ animationDelay: '0.2s' }}>
             Резон-Петров 90
           </h1>
           
           {/* Tagline */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 font-light animate-slide-up">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
             Експерти в управленски системи и ISO стандарти
           </p>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up px-2" style={{ animationDelay: '0.2s' }}>
             Помагаме на компаниите да внедрят и поддържат най-високите стандарти за качество, 
             екология, информационна сигурност и безопасност на труда.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
             <button
               onClick={scrollToContact}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto text-center"
             >
               Получете оферта
             </button>
             <button
               onClick={scrollToContact}
-              className="btn-secondary"
+              className="btn-secondary w-full sm:w-auto text-center"
             >
               Безплатна консултация
             </button>
           </div>
           
           {/* Trust indicators */}
-          <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <p className="text-sm text-gray-400 mb-6">Доверени от компании в различни индустрии</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-gray-300 font-semibold">ISO 9001</div>
-              <div className="text-gray-300 font-semibold">ISO 14001</div>
-              <div className="text-gray-300 font-semibold">ISO 27001</div>
-              <div className="text-gray-300 font-semibold">ISO 45001</div>
-              <div className="text-gray-300 font-semibold">GDPR</div>
-              <div className="text-gray-300 font-semibold">HACCP</div>
+          <div className="mt-12 sm:mt-16 animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
+            <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">Доверени от компании в различни индустрии</p>
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 opacity-60">
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 9001</div>
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 14001</div>
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 27001</div>
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">ISO 45001</div>
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">GDPR</div>
+              <div className="text-gray-300 font-semibold text-sm sm:text-base">HACCP</div>
             </div>
           </div>
         </div>
