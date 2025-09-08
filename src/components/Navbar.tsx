@@ -24,12 +24,43 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       <div className="container-max">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl lg:text-3xl font-bold text-gray-900 hover:text-brand-600 transition-colors duration-300"
+              className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300"
             >
-              Резон-Петров 90
+              {/* Compass Logo */}
+              <div className="w-10 h-10 lg:w-12 lg:h-12 relative">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  {/* Outer Circle */}
+                  <circle cx="50" cy="50" r="45" fill="none" stroke="#0284c7" strokeWidth="3"/>
+                  
+                  {/* Inner Circle */}
+                  <circle cx="50" cy="50" r="35" fill="none" stroke="#0369a1" strokeWidth="2"/>
+                  
+                  {/* Compass Needle - North */}
+                  <line x1="50" y1="15" x2="50" y2="35" stroke="#dc2626" strokeWidth="4" strokeLinecap="round"/>
+                  <polygon points="50,10 45,20 55,20" fill="#dc2626"/>
+                  
+                  {/* Compass Needle - South */}
+                  <line x1="50" y1="65" x2="50" y2="85" stroke="#6b7280" strokeWidth="4" strokeLinecap="round"/>
+                  <polygon points="50,90 45,80 55,80" fill="#6b7280"/>
+                  
+                  {/* Center Dot */}
+                  <circle cx="50" cy="50" r="4" fill="#0284c7"/>
+                  
+                  {/* Direction Markers */}
+                  <text x="50" y="12" textAnchor="middle" fontSize="12" fill="#0284c7" fontWeight="bold">N</text>
+                  <text x="88" y="55" textAnchor="middle" fontSize="10" fill="#6b7280">E</text>
+                  <text x="50" y="95" textAnchor="middle" fontSize="10" fill="#6b7280">S</text>
+                  <text x="12" y="55" textAnchor="middle" fontSize="10" fill="#6b7280">W</text>
+                </svg>
+              </div>
+              
+              {/* Company Name */}
+              <span className="text-2xl lg:text-3xl font-bold text-gray-900">
+                Резон-Петров 90
+              </span>
             </button>
           </div>
 
