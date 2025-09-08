@@ -20,28 +20,24 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create email subject
-    const subject = encodeURIComponent('Website Inquiry — Резон-Петров 90');
+    // Here you would typically send the form data to your backend
+    // For now, we'll just show a success message
+    console.log('Form submitted:', formData);
     
-    // Create email body with form data
-    const body = encodeURIComponent(`
-Име: ${formData.name}
-Имейл: ${formData.email}
-Телефон: ${formData.phone}
-Компания: ${formData.company}
-
-Съобщение:
-${formData.message}
-
----
-Това съобщение е изпратено от уебсайта на Резон-Петров 90.
-    `);
+    // Show success message
+    setIsSubmitted(true);
     
-    // Create mailto link
-    const mailtoLink = `mailto:info@resonpetrov.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: ''
+      });
+    }, 3000);
   };
 
   const contactInfo = [
@@ -56,7 +52,7 @@ ${formData.message}
     },
     {
       title: 'Имейл',
-      value: 'info@resonpetrov.com',
+      value: 'reson@abv.bg',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
