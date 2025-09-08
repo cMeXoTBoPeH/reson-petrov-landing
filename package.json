@@ -19,12 +19,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:static": "npm run build && echo 'Static build complete! Upload contents of /build folder to your SiteGround public_html/'",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://cMeXoTBoPeH.github.io/reson-petrov-landing",
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",

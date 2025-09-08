@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap
-Sitemap: https://cMeXoTBoPeH.github.io/reson-petrov-landing/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap.xml
