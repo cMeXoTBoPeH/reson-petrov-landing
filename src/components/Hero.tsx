@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           {/* Company Logo */}
           <div className="flex justify-center mb-8 animate-fade-in">
             <img 
-              src="/2222233333.png" 
+              src={`${process.env.PUBLIC_URL}/2222233333.png`}
               alt="Резон-Петров 90 Logo" 
               className="w-20 h-20 lg:w-24 lg:h-24 object-contain"
             />

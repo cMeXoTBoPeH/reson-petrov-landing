@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             >
               {/* Company Logo */}
               <img 
-                src="/2222233333.png" 
+                src={`${process.env.PUBLIC_URL}/2222233333.png`}
                 alt="Резон-Петров 90 Logo" 
                 className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
               />

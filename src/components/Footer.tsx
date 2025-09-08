@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             >
               {/* Company Logo */}
               <img 
-                src="/2222233333.png" 
+                src={`${process.env.PUBLIC_URL}/2222233333.png`}
                 alt="Резон-Петров 90 Logo" 
                 className="w-8 h-8 object-contain"
               />
