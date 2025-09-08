@@ -38,7 +38,7 @@ ${formData.message}
     `);
     
     // Create mailto link
-    const mailtoLink = `mailto:reson@abv.bg?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:info@resonpetrov.com?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
