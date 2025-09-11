@@ -19,16 +19,19 @@ const Footer: React.FC = () => {
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 text-center lg:text-left">
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-3 mb-6 hover:opacity-80 transition-opacity duration-300"
+              className="flex items-center space-x-3 mb-6 hover:opacity-80 transition-opacity duration-300 mx-auto lg:mx-0"
             >
               {/* Company Logo */}
               <img 
                 src={`${process.env.PUBLIC_URL}/2222233333.png`}
                 alt="Резон-Петров 90 Logo" 
                 className="w-8 h-8 object-contain"
+                loading="lazy"
+                width="32"
+                height="32"
               />
               
               {/* Company Name */}
@@ -36,12 +39,12 @@ const Footer: React.FC = () => {
                 Резон-Петров 90
               </span>
             </button>
-              <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
+              <p className="text-gray-300 mb-6 leading-relaxed max-w-md mx-auto lg:mx-0">
                 Водеща консултантска компания в България, специализирана в управленски системи 
                 и ISO стандарти. Помагаме на компаниите да постигнат най-високите стандарти 
                 за качество, екология и безопасност.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center lg:justify-start">
                 <a
                   href="mailto:info@reson-petrov90.bg"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-600 transition-colors duration-300"
@@ -62,7 +65,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="text-center lg:text-left">
               <h3 className="text-lg font-semibold mb-6">Бързи връзки</h3>
               <ul className="space-y-3">
                 <li>
@@ -109,7 +112,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* ISO Standards */}
-            <div>
+            <div className="text-center lg:text-left">
               <h3 className="text-lg font-semibold mb-6">ISO стандарти</h3>
               <ul className="space-y-3">
                 <li>

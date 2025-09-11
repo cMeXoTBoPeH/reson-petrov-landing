@@ -13,11 +13,22 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    // Scroll to top on page load/refresh
+    window.scrollTo(0, 0);
+
+    // Throttle scroll handler to prevent forced reflows
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const Contact: React.FC = () => {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -17,19 +20,37 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Here you would typically send the form data to your backend
-    // For now, we'll just show a success message
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const serviceId = 'service_3rrct67';
+      const templateId = 'template_h2vb7n4';
+      const publicKey = 'k_f4Wgzvu_A5b2-mx';
+
+      const templateParams = {
+        // Name variants to match any template variable you might be using
+        from_name: formData.name,
+        user_name: formData.name,
+        full_name: formData.name,
+        contact_name: formData.name,
+        sender_name: formData.name,
+        name: formData.name,
+        // Email variants
+        from_email: formData.email,
+        reply_to: formData.email,
+        // Other fields
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message,
+        to_email: 'info@resonpetrov.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
@@ -37,7 +58,12 @@ const Contact: React.FC = () => {
         company: '',
         message: ''
       });
-    }, 3000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -52,7 +78,7 @@ const Contact: React.FC = () => {
     },
     {
       title: 'Имейл',
-      value: 'reson@abv.bg',
+      value: 'info@resonpetrov.com',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -173,13 +199,48 @@ const Contact: React.FC = () => {
               
               <button
                 type="submit"
-                className="w-full btn-primary"
+                disabled={isSubmitting}
+                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Изпрати съобщение
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span>Изпраща се...</span>
+                  </div>
+                ) : (
+                  'Изпрати съобщение'
+                )}
               </button>
               
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p className="text-green-800 font-medium">
+                      Съобщението е изпратено успешно! Ще се свържем с вас скоро.
+                    </p>
+                  </div>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <p className="text-red-800 font-medium">
+                      Възникна грешка при изпращане. Моля, опитайте отново или се свържете с нас директно.
+                    </p>
+                  </div>
+                </div>
+              )}
+              
               <p className="text-sm text-gray-500 text-center">
-                Ще отворим вашия имейл клиент с предварително попълнено съобщение
+                Съобщението ще бъде изпратено директно на нашия имейл
               </p>
             </form>
           </div>

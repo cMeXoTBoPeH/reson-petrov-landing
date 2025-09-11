@@ -9,14 +9,10 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-28 scroll-mt-24">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-brand-50"></div>
       
-      {/* Floating elements for visual interest */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-brand-100 rounded-full opacity-20 animate-float"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 bg-brand-200 rounded-full opacity-30 animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-40 left-20 w-12 h-12 bg-brand-300 rounded-full opacity-25 animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="container-max text-center relative z-10">
         <div className="max-w-4xl mx-auto px-4">
@@ -26,6 +22,9 @@ const Hero: React.FC = () => {
               src={`${process.env.PUBLIC_URL}/2222233333.png`}
               alt="Резон-Петров 90 Logo" 
               className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+              loading="eager"
+              width="96"
+              height="96"
             />
           </div>
           
@@ -36,7 +35,7 @@ const Hero: React.FC = () => {
           
           {/* Tagline */}
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
-            Разработване на управленски системи съгласно ISO стандарти
+            Разработване на управленски системи съгласно международни стандарти
           </h2>
           
           {/* Description */}
@@ -80,12 +79,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 };

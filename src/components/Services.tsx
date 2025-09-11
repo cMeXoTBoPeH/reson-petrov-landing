@@ -80,9 +80,9 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center md:text-left"
             >
-              <div className="text-brand-600 mb-6 group-hover:text-brand-700 transition-colors duration-300">
+              <div className="text-brand-600 mb-6 group-hover:text-brand-700 transition-colors duration-300 flex justify-center md:justify-start">
                 {service.icon}
               </div>
               
@@ -94,7 +94,7 @@ const Services: React.FC = () => {
                 {service.description}
               </p>
               
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-left">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-brand-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

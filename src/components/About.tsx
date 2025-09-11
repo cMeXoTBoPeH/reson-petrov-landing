@@ -45,7 +45,7 @@ const About: React.FC = () => {
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Story */}
-          <div>
+          <div className="text-center lg:text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               За нас
             </h2>
@@ -83,17 +83,17 @@ const About: React.FC = () => {
           </div>
 
           {/* Right side - Differentiators */}
-          <div>
+          <div className="text-center lg:text-left">
             <h3 className="text-3xl font-bold text-gray-900 mb-8">
               Защо да изберете нас?
             </h3>
             <div className="space-y-6">
               {differentiators.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600">
+                  <div className="flex-shrink-0 w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 mx-auto lg:mx-0">
                     {item.icon}
                   </div>
-                  <div>
+                  <div className="text-center lg:text-left">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
                       {item.title}
                     </h4>

@@ -81,9 +81,9 @@ const Industries: React.FC = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center md:text-left"
             >
-              <div className="text-brand-600 mb-6 group-hover:text-brand-700 transition-colors duration-300">
+              <div className="text-brand-600 mb-6 group-hover:text-brand-700 transition-colors duration-300 flex justify-center md:justify-start">
                 {industry.icon}
               </div>
               
@@ -99,7 +99,7 @@ const Industries: React.FC = () => {
                 <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
                   Подходящи стандарти:
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                   {industry.standards.map((standard, standardIndex) => (
                     <span
                       key={standardIndex}
