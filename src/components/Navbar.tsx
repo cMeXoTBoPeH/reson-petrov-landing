@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        ? 'bg-white/60 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
       <div className="container-max">
@@ -27,20 +27,14 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <div className="flex items-center">
             <button
               onClick={() => scrollToSection('hero')}
-              className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity duration-300"
+              className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
               {/* Company Logo */}
               <img 
-                src={`${process.env.PUBLIC_URL}/2222233333.png`}
+                src={`${process.env.PUBLIC_URL}/LogoRPTransperant.png`}
                 alt="Резон-Петров 90 Logo" 
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain flex-shrink-0"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain flex-shrink-0"
               />
-              
-              {/* Company Name */}
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                <span className="hidden sm:inline">Резон-Петров 90</span>
-                <span className="sm:hidden">Р-П 90</span>
-              </span>
             </button>
           </div>
 

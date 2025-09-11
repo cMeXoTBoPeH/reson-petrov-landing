@@ -26,12 +26,12 @@ const Footer: React.FC = () => {
             >
               {/* Company Logo */}
               <img 
-                src={`${process.env.PUBLIC_URL}/2222233333.png`}
+                src={`${process.env.PUBLIC_URL}/LogoRPTransperant.png`}
                 alt="Резон-Петров 90 Logo" 
-                className="w-8 h-8 object-contain"
+                className="w-16 h-16 object-contain"
                 loading="lazy"
-                width="32"
-                height="32"
+                width="64"
+                height="64"
               />
               
               {/* Company Name */}
