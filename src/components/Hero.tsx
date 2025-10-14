@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -9,15 +10,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-start justify-center overflow-hidden pt-20 lg:pt-24 scroll-mt-20">
+    <section id="hero" className="relative min-h-screen flex items-start justify-center overflow-hidden pt-16 lg:pt-18 scroll-mt-20">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-brand-50"></div>
       
       
-      <div className="container-max text-center relative z-10 pt-4 pb-8">
+      <div className="container-max text-center relative z-10 pt-0 pb-8">
         <div className="max-w-5xl mx-auto px-4">
           {/* Company Logo */}
-          <div className="flex justify-center mb-6 sm:mb-8 animate-fade-in">
+          <div className="flex justify-center mb-2 sm:mb-2 animate-fade-in">
             <img 
               src={`${process.env.PUBLIC_URL}/LogoRPTransperant.png`}
               alt="Резон-Петров 90 Logo" 
@@ -29,29 +30,31 @@ const Hero: React.FC = () => {
           </div>
           
           {/* Main heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 animate-fade-in leading-tight" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-3 sm:mb-4 animate-fade-in leading-tight" style={{ animationDelay: '0.2s' }}>
             Резон-Петров 90 – Консултации и внедряване на международни стандарти
           </h1>
           
           {/* Tagline */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-6 sm:mb-8 font-light animate-slide-up leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-4 sm:mb-6 font-light animate-slide-up leading-relaxed">
             Разработване на управленски системи съгласно международни стандарти
           </h2>
           
           {/* Description */}
           <div className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
             <p className="mb-6">
-              Помагаме на компаниите да внедрят и поддържат ситеми за управление на качество, 
-              екология, информационна сигурност, безопасност на храните, безопастност при работа и безопастност при движение по пътищата.
+              Помагаме на компаниите да внедрят и поддържат системи за управление на качество, 
+              екология, информационна сигурност, безопасност на храните, безопасност при работа и безопасност при движение по пътищата. 
+              Предлагаме <strong>професионални консултации</strong> и подготвяме фирми за <strong>успешна сертификация</strong>.
             </p>
             <p className="mb-6">
               С над 30 години опит в <strong>ISO 9001</strong>, <strong>ISO 14001</strong>, <strong>ISO 27001</strong>, 
-              <strong>ISO 45001</strong>, <strong>ISO 22001</strong> и <strong>ISO 39001</strong>, сме лидери в 
-              консултациите за управленски системи в България. Разгледайте нашите <a href="#services" className="text-brand-600 hover:text-brand-700 font-medium transition-colors duration-200">услуги</a> за повече информация.
+              <strong>ISO 45001</strong>, <strong>ISO 22001</strong>, <strong>ISO 39001</strong>, <strong>ISO 50001</strong>, 
+              <strong>EMAS</strong>, <strong>GDPR</strong> и <strong>HACCP</strong>, сме водещи консултанти в България. 
+              Разгледайте нашите <a href="#services" className="text-brand-600 hover:text-brand-700 font-medium transition-colors duration-200">услуги</a> за повече информация.
             </p>
             <p className="mb-0">
               Работим с малки и средни предприятия в различни сектори, като осигуряваме персонализиран подход 
-              и професионална поддръжка за постигане на международни стандарти. <a href="#contact" className="text-brand-600 hover:text-brand-700 font-medium transition-colors duration-200">Свържете се с нас</a> за безплатна консултация.
+              и професионална поддръжка за постигане на <strong>международни стандарти</strong>. <a href="#contact" className="text-brand-600 hover:text-brand-700 font-medium transition-colors duration-200">Свържете се с нас</a> за безплатна консултация.
             </p>
           </div>
           
